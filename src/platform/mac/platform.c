@@ -243,3 +243,7 @@ void AMPlatformDrawSpritePlusMask(AMPlatformRef platform, uint8_t _x, uint8_t _y
     }
   }
 }
+
+AMTick AMPlatformGetTicks(AMPlatformRef platform) {
+  return SDL_GetTicks();
+}
