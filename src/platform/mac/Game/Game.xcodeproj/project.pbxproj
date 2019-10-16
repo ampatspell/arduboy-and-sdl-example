@@ -55,7 +55,6 @@
 		2155AEB72357B02A00F20B37 = {
 			isa = PBXGroup;
 			children = (
-				2155AEE62357B5BA00F20B37 /* Config.xcconfig */,
 				2155AEDA2357B22C00F20B37 /* src */,
 				2155AEC22357B02A00F20B37 /* Game */,
 				2155AEC12357B02A00F20B37 /* Products */,
@@ -74,6 +73,7 @@
 		2155AEC22357B02A00F20B37 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				2155AEE62357B5BA00F20B37 /* Config.xcconfig */,
 				2155AEC62357B02C00F20B37 /* Assets.xcassets */,
 				2155AECB2357B02C00F20B37 /* Info.plist */,
 				2155AECE2357B02C00F20B37 /* Game.entitlements */,
