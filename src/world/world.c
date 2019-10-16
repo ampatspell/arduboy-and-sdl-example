@@ -36,15 +36,12 @@ uint8_t s2 = 0;
 AMTimer timer;
 
 void AMWorldSetup(AMWorldRef world) {
-  AMPlatformRef platform = world->platform;
-  AMTimerInit(&timer, 300, platform);
+  AMTimerInit(&timer, 300);
 }
 
 void AMWorldTick(AMWorldRef world) {
-  AMPlatformRef platform = world->platform;
-  
-  AMPlatformDrawSpritePlusMask(platform, 57, 38, sprite_2, s2);
-  AMPlatformDrawSpritePlusMask(platform, 50, 64-16, sprite_1, s1);
+  AMPlatformDrawSpritePlusMask(57, 38, sprite_2, s2);
+  AMPlatformDrawSpritePlusMask(50, 64-16, sprite_1, s1);
   
   if(AMTimerTick(&timer)) {
     s2++;

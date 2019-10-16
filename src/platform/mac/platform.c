@@ -75,6 +75,10 @@ AMPlatformRef AMPlatformCreate() {
   return platform;
 }
 
+AMPlatformRef AMPlatformGet() {
+  return &__platform;
+}
+
 void AMPLatformSetPixel(AMPlatformRef platform, uint8_t pixel) {
   platform->pixel = pixel;
   AMPlatformWindowSize size = AMPlatformCalculateWindowSize(platform);
@@ -221,7 +225,7 @@ int main(int argc, const char * argv[]) {
 
 #pragma mark -
 
-void AMPlatformDrawSpritePlusMask(AMPlatformRef platform, uint8_t _x, uint8_t _y, const unsigned char *ptr, uint8_t index) {
+void AMPlatformDrawSpritePlusMask(uint8_t _x, uint8_t _y, const unsigned char *ptr, uint8_t index) {
   uint8_t width = *ptr++;
   uint8_t height = *ptr++;
   
@@ -237,13 +241,13 @@ void AMPlatformDrawSpritePlusMask(AMPlatformRef platform, uint8_t _x, uint8_t _y
         int white = color & (1 << y);
         int draw = mask & (1 << y);
         if(draw) {
-          AMPlatformDrawPixel(platform, _x + x, _y + (page * 8) + y, !!white);
+          AMPlatformDrawPixel(AMPlatformGet(), _x + x, _y + (page * 8) + y, !!white);
         }
       }
     }
   }
 }
 
-AMTick AMPlatformGetTicks(AMPlatformRef platform) {
+AMTick AMPlatformGetTicks(void) {
   return SDL_GetTicks();
 }

@@ -4,12 +4,11 @@
 #include <stdbool.h>
 
 typedef struct {
-  AMPlatformRef platform;
   AMTick tick;
   AMTick interval;
 } AMTimer;
 
 typedef AMTimer* AMTimerRef;
 
-AMTimerRef AMTimerInit(AMTimerRef timer, AMTick interval, AMPlatformRef platform);
+AMTimerRef AMTimerInit(AMTimerRef timer, AMTick interval);
 bool AMTimerTick(AMTimerRef timer);
