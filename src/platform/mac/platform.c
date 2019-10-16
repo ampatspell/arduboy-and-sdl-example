@@ -1,5 +1,3 @@
-#ifdef PLATFORM_MAC
-
 #include "platform.h"
 #include "../../world/world.h"
 #include <SDL2/SDL.h>
@@ -251,5 +249,3 @@ void AMPlatformDrawSpritePlusMask(AMPlatformRef platform, uint8_t _x, uint8_t _y
     }
   }
 }
-
-#endif
