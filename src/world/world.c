@@ -29,9 +29,6 @@ static uint8_t i = 0;
 void AMWorldTick(AMWorldRef world) {
   AMPlatformRef platform = world->platform;
   
-  AMPlatformSetCursor(platform, 0, 0);
-  AMPlatformPrintString(platform, "Hello");
-
   AMPlatformDrawSpritePlusMask(platform, 5, 5, sprite_2, i);
   AMPlatformDrawSpritePlusMask(platform, 50, 30, sprite_2, i);
 

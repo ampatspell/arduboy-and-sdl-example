@@ -37,14 +37,6 @@ void loop() {
 
 //
 
-void AMPlatformSetCursor(AMPlatformRef platform, uint8_t x, uint8_t y) {
-  arduboy.setCursor(x, y);
-}
-
-void AMPlatformPrintString(AMPlatformRef platform, char *str) {
-  arduboy.print(str);
-}
-
 void AMPlatformDrawSpritePlusMask(AMPlatformRef platform, uint8_t x, uint8_t y, const unsigned char *ptr, uint8_t index) {
   Sprites::drawPlusMask(x, y, ptr, index);
 }

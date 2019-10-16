@@ -221,12 +221,6 @@ int main(int argc, const char * argv[]) {
 
 #pragma mark -
 
-void AMPlatformSetCursor(AMPlatformRef platform, uint8_t x, uint8_t y) {
-}
-
-void AMPlatformPrintString(AMPlatformRef platform, char *str) {
-}
-
 void AMPlatformDrawSpritePlusMask(AMPlatformRef platform, uint8_t _x, uint8_t _y, const unsigned char *ptr, uint8_t index) {
   uint8_t width = *ptr++;
   uint8_t height = *ptr++;
