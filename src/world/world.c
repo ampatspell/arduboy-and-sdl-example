@@ -49,5 +49,4 @@ void AMWorldTick(AMWorldRef world) {
       s2=0;
     }
   }
-  
 }
