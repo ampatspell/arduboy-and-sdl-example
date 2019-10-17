@@ -1,12 +1,12 @@
-#include "timer.h"
+#include "interval.h"
 
-AMTimerRef AMTimerInit(AMTimerRef timer, AMTick interval) {
+AMIntervalRef AMIntervalInit(AMIntervalRef timer, AMTick interval) {
   timer->interval = interval;
   timer->tick = AMPlatformGetTicks();
   return timer;
 }
 
-bool AMTimerTick(AMTimerRef timer) {
+bool AMIntervalTick(AMIntervalRef timer) {
   AMTick now = AMPlatformGetTicks();
   if(now - timer->tick > timer->interval) {
     timer->tick = now;

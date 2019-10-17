@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		211B6DA72357C72300BFE57D /* timer.c in Sources */ = {isa = PBXBuildFile; fileRef = 211B6DA62357C72300BFE57D /* timer.c */; };
+		211B6DA72357C72300BFE57D /* interval.c in Sources */ = {isa = PBXBuildFile; fileRef = 211B6DA62357C72300BFE57D /* interval.c */; };
 		2155AEC72357B02C00F20B37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2155AEC62357B02C00F20B37 /* Assets.xcassets */; };
 		2155AED62357B08900F20B37 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2155AED52357B08900F20B37 /* SDL2.framework */; };
 		2155AED92357B17A00F20B37 /* SDL2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2155AED52357B08900F20B37 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -29,8 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		211B6DA52357C72300BFE57D /* timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = timer.h; path = ../../../world/timer.h; sourceTree = "<group>"; };
-		211B6DA62357C72300BFE57D /* timer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = timer.c; path = ../../../world/timer.c; sourceTree = "<group>"; };
+		211B6DA52357C72300BFE57D /* interval.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = interval.h; path = ../../../world/interval.h; sourceTree = "<group>"; };
+		211B6DA62357C72300BFE57D /* interval.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = interval.c; path = ../../../world/interval.c; sourceTree = "<group>"; };
 		2155AEC02357B02A00F20B37 /* Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2155AEC62357B02C00F20B37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2155AECB2357B02C00F20B37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,8 +115,8 @@
 			children = (
 				2155AEE42357B38900F20B37 /* world.c */,
 				2155AEE32357B38900F20B37 /* world.h */,
-				211B6DA52357C72300BFE57D /* timer.h */,
-				211B6DA62357C72300BFE57D /* timer.c */,
+				211B6DA52357C72300BFE57D /* interval.h */,
+				211B6DA62357C72300BFE57D /* interval.c */,
 			);
 			name = world;
 			sourceTree = "<group>";
@@ -190,7 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				211B6DA72357C72300BFE57D /* timer.c in Sources */,
+				211B6DA72357C72300BFE57D /* interval.c in Sources */,
 				2155AEE52357B38900F20B37 /* world.c in Sources */,
 				2155AEDE2357B24300F20B37 /* platform.c in Sources */,
 			);

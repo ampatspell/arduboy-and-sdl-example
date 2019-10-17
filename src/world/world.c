@@ -1,5 +1,5 @@
 #include "world.h"
-#include "timer.h"
+#include "interval.h"
 
 struct AMWorld {
   AMPlatformRef platform;
@@ -33,17 +33,17 @@ const unsigned char sprite_2[] PROGMEM = {
 uint8_t s1 = 0;
 uint8_t s2 = 0;
 
-AMTimer timer;
+AMInterval interval;
 
 void AMWorldSetup(AMWorldRef world) {
-  AMTimerInit(&timer, 300);
+  AMIntervalInit(&interval, 300);
 }
 
 void AMWorldTick(AMWorldRef world) {
   AMPlatformDrawSpritePlusMask(57, 38, sprite_2, s2);
   AMPlatformDrawSpritePlusMask(50, 64-16, sprite_1, s1);
   
-  if(AMTimerTick(&timer)) {
+  if(AMIntervalTick(&interval)) {
     s2++;
     if(s2 > 4) {
       s2=0;
